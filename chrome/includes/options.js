@@ -61,7 +61,7 @@ $(document).ready(function () {
 		 * Google Analytics v4
 		 */		
 		$.ajax({
-			url: "https://www.google-analytics.com/mp/collect?measurement_id=G-QSJEB7CXHL&api_secret=OCGloj3CSCW0LrqZVW8jdA", 
+			url: "https://www.google-analytics.com/mp/collect?measurement_id=G-QSJEB7CXHL&api_secret=fPtKBUGQSc6p-7TTLSh5OA", 
 			crossDomain: true,
 			type: "POST",
 			dataType: "json",
