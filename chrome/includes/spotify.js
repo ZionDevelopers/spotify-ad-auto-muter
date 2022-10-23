@@ -11,7 +11,7 @@ var ads = {
 };
 var mute = true;
 var muted = false;
-var videoAdDetector = 'div.video-ads div.ytp-ad-player-overlay-instream-info';
+var audioAdDetector = "a[data-context-item-type='ad'][href^='https://adclick.g.doubleclick.net']";
 var video = 'none';
 
 /**
@@ -111,41 +111,29 @@ var autoCloser = function () {
 			});
 
 			// Mute option enabled?
-			if (mute) {
-				// Set video
-				video = $('div#movie_player video')[0];
-				
-				// Check if video ad is present and video is not muted
-				if($(videoAdDetector).is(':visible') && !muted) {
-					// Check if video is not muted
-					if (!video.muted) {
-						// Check if miniplayer is not visible
-						if (!$('a.ytd-miniplayer').is(':visible')) {
-							// Click on mute button
-							$('div#movie_player button.ytp-mute-button').click();
-						} else {
-							// Mute video
-							video.muted = true;
-						}
+			if (mute) {				
+				// Detect if audio is running
+				var audioPlaying = $('div.player-controls__buttons button[data-testid="control-button-playpause"]').attr('aria-label') !== 'Play';
+								
+				// Check if audio ad is present and audio is not muted
+				if($(audioAdDetector).is(':visible') && !muted) {
+					// Check if audio is playing
+					if (audioPlaying) {						
+						// Click on mute button
+						$('div.volume-bar button.volume-bar__icon-button.control-button').click();
 						// Set state to muted
 						muted = true;
 					}
-				// Check if video ad is not present but the video is muted
-				} else if (!$(videoAdDetector).is(':visible') && muted) {
-					// Check if video is muted
-					if (video.muted) {
-						// Check if miniplayer is not visible
-						if (!$('a.ytd-miniplayer').is(':visible')) {
-							// Click on mute button
-							$('div#movie_player button.ytp-mute-button').click();
-						} else {
-							// Unmute video
-							video.muted = false;
-						}
+				// Check if audio ad is not present but the ad is muted
+				} else if (!$(audioAdDetector).is(':visible') && muted) {
+					// Check if audio is playing
+					if (audioPlaying) {						
+						// Click on mute button
+						$('div.volume-bar button.volume-bar__icon-button.control-button').click();						
 					}
 					// Unmute
 					muted = false;
-				}
+				}				
 			}
 		}
 	});
@@ -191,7 +179,7 @@ $(document).ready(function () {
 		
 		// Trigger hotkey
 		$(document).on('keydown', null, hotkey, triggerHotkey);
-
+		
 		// Run Extension
 		run();
 	});	

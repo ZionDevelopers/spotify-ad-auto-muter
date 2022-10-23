@@ -17,9 +17,7 @@
 	"short_name": "Spotify Ad Auto-Closer",
 	"options_page": "options.html",
 	"permissions": [
-		"storage",
-		"tabs",
-		"activeTab"
+		"storage"
 	],	
 	"host_permissions": [
 		"https://www.google-analytics.com/"

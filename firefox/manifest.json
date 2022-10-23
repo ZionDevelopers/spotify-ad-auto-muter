@@ -8,7 +8,7 @@
 	"content_scripts": [{
 		"all_frames": true,
 		"exclude_globs": [],
-		"include_globs": ["open.spotify.com*"],
+		"include_globs": ["*open.spotify.com*"],
 		"js": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/spotify.js"],
 		"matches": ["*://open.spotify.com/*"],
 		"run_at": "document_start"
@@ -24,11 +24,9 @@
 		"page": "options.html"
 	},
 	"permissions": [
-		"storage",
-		"tabs",
-		"activeTab",
+		"storage",		
 		"https://www.google-analytics.com/"
 	],
 	"version": "0.0.1",
-	"web_accessible_resources": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/spotify.js", "jquery-3.6.0.min.map" ]
+	"web_accessible_resources": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/spotify.js", "jquery-3.6.0.min.map" ]	
 }
