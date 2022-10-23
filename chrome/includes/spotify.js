@@ -19,6 +19,7 @@ var video = 'none';
  * @constructor 
  */
 function run() {
+	console.log('Spotify ad auto-closer loading...');
 	// Run autoCloser function every X milliseconds
     autoCloserId = setInterval(autoCloser, 100);
 }
@@ -112,7 +113,7 @@ var autoCloser = function () {
 
 			// Mute option enabled?
 			if (mute) {				
-				// Detect if audio is running
+				// Detect if audio is playing
 				var audioPlaying = $('div.player-controls__buttons button[data-testid="control-button-playpause"]').attr('aria-label') !== 'Play';
 								
 				// Check if audio ad is present and audio is not muted
