@@ -1,6 +1,6 @@
 Spotify Ad Auto-closer (NOT WORKING YET)
 =====
-![Logo](https://addons.mozilla.org/user-media/previews/thumbs/192/192740.jpg?modified=1622132899)
+![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-autocloser/main/firefox-banner.png)
 ====
 This is NOT an Ad Blocker, It just closes faster.<br/>
 Support Spotify by disabling AdBlock / uBlock on open.spotify.com and use this extension to close the ads as soon as possible after the Close / Skip button is available.<br/>
