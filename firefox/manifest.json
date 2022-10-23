@@ -1,16 +1,16 @@
 {
 	"applications": {
 	  "gecko": {
-		"id": "youtube-ad-closer@juliocesar.me",
+		"id": "spotify-ad-closer@juliocesar.me",
 		"strict_min_version": "57.0"
 	  }
 	},
 	"content_scripts": [{
 		"all_frames": true,
 		"exclude_globs": [],
-		"include_globs": ["*youtube.com*"],
+		"include_globs": ["open.spotify.com*"],
 		"js": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/youtube.js"],
-		"matches": ["*://*.youtube.com/*"],
+		"matches": ["*://open.spotify.com/*"],
 		"run_at": "document_start"
 	}],
 	"description": "Automatically close ads after X seconds",
@@ -18,8 +18,8 @@
 		"128": "icon.png" 
 	},   
 	"manifest_version": 2,
-	"name": "YouTube Ad Auto-Closer",
-	"short_name": "YT Ad Auto-Closer",	
+	"name": "Spotify Ad Auto-Closer",
+	"short_name": "Spotify Ad Auto-Closer",	
 	"options_ui": {
 		"page": "options.html"
 	},
@@ -27,6 +27,6 @@
 		"storage",
 		"https://www.google-analytics.com/"
 	],
-	"version": "1.3.17",
-	"web_accessible_resources": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/youtube.js", "jquery-3.6.0.min.map" ]
+	"version": "0.0.1",
+	"web_accessible_resources": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/spotify.js", "jquery-3.6.0.min.map" ]
 }
