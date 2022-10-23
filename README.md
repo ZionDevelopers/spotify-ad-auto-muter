@@ -1,4 +1,4 @@
-Spotify Ad Auto-closer
+Spotify Ad Auto-closer (NOT WORKING YET)
 =====
 ![Logo](https://addons.mozilla.org/user-media/previews/thumbs/192/192740.jpg?modified=1622132899)
 ====
