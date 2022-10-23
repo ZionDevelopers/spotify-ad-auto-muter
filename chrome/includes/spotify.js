@@ -40,13 +40,13 @@ function triggerHotkey () {
 	// Revert enabled state
 	enabled = !enabled;
 	// Add html alert
-	$('body').append('<div style="display: none; background-color:' + (enabled ? 'green':'red') + ';color: #fff;font-family: Arial; font-size: 12px; margin: 0 auto; z-index: 9999;position: absolute" id="youtube-ad-autocloser-alert">YouTube Ad Auto-Closer: <b>'+(enabled ? 'Enabled!' : 'Disabled!')+'</b></div>');
+	$('body').append('<div style="display: none; background-color:' + (enabled ? 'green':'red') + ';color: #fff;font-family: Arial; font-size: 12px; margin: 0 auto; z-index: 9999;position: absolute" id="spotify-ad-autocloser-alert">Spotify Ad Auto-Closer: <b>'+(enabled ? 'Enabled!' : 'Disabled!')+'</b></div>');
 	// Fade in the html alert
-	$('div#youtube-ad-autocloser-alert').fadeIn();
+	$('div#spotify-ad-autocloser-alert').fadeIn();
 	// Trigger timout for the removal of the html alert
 	setTimeout(function () {
 		// Fade Out the html alert
-		$('div#youtube-ad-autocloser-alert').fadeOut(function () {
+		$('div#spotify-ad-autocloser-alert').fadeOut(function () {
 			// Remove the html alert
 			$(this).remove();
 		});
@@ -164,7 +164,7 @@ $(document).ready(function () {
 				
 		/** 
 		 * Google Analytics v4
-		 */
+		 */		
 		$.ajax({
 			url: "https://www.google-analytics.com/mp/collect?measurement_id=G-QSJEB7CXHL&api_secret=OCGloj3CSCW0LrqZVW8jdA", 
 			crossDomain: true,
@@ -176,13 +176,12 @@ $(document).ready(function () {
 			"events": [{
 			  "name": "page_view",
 			  "params": {				
-				"page_title": 'YouTube',
-				"page_location": 'https://www.youtube.com'
+				"page_title": 'Spotify',
+				"page_location": 'https://open.spotify.com'
 			  }
 			}]
 		  }),
 		});
-		
 		
 		// Check for uid
 		if (options.uid == 'none') {

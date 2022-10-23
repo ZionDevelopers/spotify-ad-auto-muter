@@ -9,7 +9,7 @@
 		"all_frames": true,
 		"exclude_globs": [],
 		"include_globs": ["open.spotify.com*"],
-		"js": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/youtube.js"],
+		"js": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/spotify.js"],
 		"matches": ["*://open.spotify.com/*"],
 		"run_at": "document_start"
 	}],

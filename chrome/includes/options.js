@@ -56,10 +56,10 @@ $(document).ready(function () {
 		$("input#hotkey").val(hotkey);	
 		// Set hotkey trigger
 		$(document).on('keydown', null, hotkey, triggerHotkey);	
-	
+
 		/** 
 		 * Google Analytics v4
-		 */
+		 */		
 		$.ajax({
 			url: "https://www.google-analytics.com/mp/collect?measurement_id=G-QSJEB7CXHL&api_secret=OCGloj3CSCW0LrqZVW8jdA", 
 			crossDomain: true,
@@ -76,8 +76,8 @@ $(document).ready(function () {
 			  }
 			}]
 		  }),
-		 });	
-		 
+		 });
+
 		// Check for uid
 		if (options.uid == 'none') {
 			// Set preferences
