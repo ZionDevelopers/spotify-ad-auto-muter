@@ -1,4 +1,4 @@
 @echo off
-cd /d D:\Github\youtube-ad-auto-closer\firefox
+cd /d D:\Github\spotify-ad-autocloser\firefox
 web-ext run
 pause
