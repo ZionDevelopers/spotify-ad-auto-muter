@@ -5,7 +5,7 @@ Spotify Ad Auto-closer (ONLY audio ad automatic mute is working)
 This is NOT an Ad Blocker, It just closes faster.<br/>
 Support Spotify by disabling AdBlock / uBlock on open.spotify.com and use this extension to close the ads as soon as possible after the Close / Skip button is available.<br/>
 
-New Feature: Automatically mute video ads (Changeable on Options)<br/>
+New Feature: Automatically mute audio ads (Changeable on Options)<br/>
 New Feature: Disable / Enable the extension by pressing F1 (Firefox) or F2 (Google Chrome) (Changeable on Options)<br/>
 
 This is not an Spotify official extension.<br/>
