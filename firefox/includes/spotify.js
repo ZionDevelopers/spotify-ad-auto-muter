@@ -11,7 +11,7 @@ var ads = {
 };
 var mute = true;
 var muted = false;
-var videoAdDetector = 'div.video-ads div.ytp-ad-player-overlay-instream-info';
+var audioAdDetector = "a[data-context-item-type='ad'][href^='https://adclick.g.doubleclick.net']";
 var video = 'none';
 
 /**
@@ -91,6 +91,15 @@ function closeAd(selector, options) {
 }
 
 /**
+ * Detect and get tab
+ * @returns array|object
+ */
+function getCurrentTab() {
+	let [tab] = await chrome.tabs.query({ url: 'https://open.spotify.com/*' });
+	return tab;
+}
+
+/**
  * Auto Closer function the extension Init function
  * @constructor
  */
@@ -112,36 +121,26 @@ var autoCloser = function () {
 
 			// Mute option enabled?
 			if (mute) {
-				// Set video
-				video = $('div#movie_player video')[0];
-				
+				// Detect tab
+				var tab = getCurrentTab();
+				var audioRunning = typeof tab.audible == 'boolean';
+				var tabMuted = typeof tab.muted == 'boolean';
+								
 				// Check if video ad is present and video is not muted
-				if($(videoAdDetector).is(':visible') && !muted) {
-					// Check if video is not muted
-					if (!video.muted) {
-						// Check if miniplayer is not visible
-						if (!$('a.ytd-miniplayer').is(':visible')) {
-							// Click on mute button
-							$('div#movie_player button.ytp-mute-button').click();
-						} else {
-							// Mute video
-							video.muted = true;
-						}
+				if($(audioAdDetector).is(':visible') && !muted) {
+					// Check if audio is running
+					if (audioRunning) {						
+						// Click on mute button
+						$('div.volume-bar button.volume-bar__icon-button.control-button').click();
 						// Set state to muted
 						muted = true;
 					}
 				// Check if video ad is not present but the video is muted
-				} else if (!$(videoAdDetector).is(':visible') && muted) {
-					// Check if video is muted
-					if (video.muted) {
-						// Check if miniplayer is not visible
-						if (!$('a.ytd-miniplayer').is(':visible')) {
-							// Click on mute button
-							$('div#movie_player button.ytp-mute-button').click();
-						} else {
-							// Unmute video
-							video.muted = false;
-						}
+				} else if (!$(audioAdDetector).is(':visible') && muted) {
+					// Check if audio is running
+					if (audioRunning) {						
+						// Click on mute button
+						$('div.volume-bar button.volume-bar__icon-button.control-button').click();						
 					}
 					// Unmute
 					muted = false;
