@@ -2,7 +2,7 @@
 	"content_scripts": [ {
 		"all_frames": true,
 		"exclude_globs": [  ],
-		"include_globs": [ "open.spotify.com*" ],
+		"include_globs": [ "*open.spotify.com*" ],
 		"css": [],
 		"js": [ "includes/jquery-3.6.0.min.js", "includes/spotify.js", "includes/jquery.hotkeys.js" ],
 		"matches": [ "*://open.spotify.com/*" ],
