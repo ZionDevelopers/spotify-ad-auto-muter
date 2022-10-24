@@ -21,7 +21,7 @@ var video = 'none';
  * @constructor 
  */
 function run() {
-	console.log('Spotify ad auto-closer loading...');
+	console.log('Spotify Ad Auto-Muter loading...');
 	// Run autoCloser function every X milliseconds
     autoCloserId = setInterval(autoCloser, 100);
 }

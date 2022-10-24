@@ -8,13 +8,13 @@
 		"matches": [ "*://open.spotify.com/*" ],
 		"run_at": "document_start"
 	} ],
-	"description": "Automatically close ads after X seconds",
+	"description": "Automatically mute audio ads.",
 	"icons": {
 		"128": "icons/icon.png"
 	},   
 	"manifest_version": 3,
-	"name": "Spotify Ad Auto-Closer",
-	"short_name": "Spotify Ad Auto-Closer",
+	"name": "Spotify Ad Auto-Muter",
+	"short_name": "Spotify Ad Auto-Muter",
 	"options_page": "options.html",
 	"permissions": [
 		"storage"
