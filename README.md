@@ -25,5 +25,5 @@ This work is licensed under the Creative Commons Attribution-NonCommercial-Share
 To view a copy of this license, visit [Common Creative's Website][License].
 
 [GoogleChrome]: <https://chrome.google.com/webstore/detail/youtube-ad-auto-closer/janhkcfgfnafdebdmlbnhopmnoiepmpc>
-[Firefox]: <https://addons.mozilla.org/en-US/firefox/addon/youtube-ads-auto-closer/>
+[Firefox]: <https://addons.mozilla.org/en-US/firefox/addon/spotify-ad-auto-muter/>
 [License]: <https://creativecommons.org/licenses/by-nc-sa/4.0/>
