@@ -1,4 +1,4 @@
-Spotify Ad Auto-closer (ONLY audio ad automatic mute is working)
+Spotify Ad Auto-muter
 =====
 ![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-autocloser/main/firefox-banner.png)
 ====
