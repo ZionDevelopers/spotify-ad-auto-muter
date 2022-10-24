@@ -5,10 +5,12 @@ var autoCloserId = 0;
 var enabled = true;
 var hotkey = 'F1';
 var uid = 'none';
+/*
 var ads = {
 	videoBanner: 'div.video-ads button.ytp-ad-overlay-close-button, div.video-ads div.close-padding', 
 	videoSkip: 'div.video-ads button.ytp-ad-skip-button, div.video-ads button.videoAdUiSkipButton'
 };
+*/
 var mute = true;
 var muted = false;
 var audioAdDetector = "a[data-context-item-type='ad'][href^='https://adclick.g.doubleclick.net']";
@@ -62,7 +64,7 @@ function triggerHotkey () {
  * @constructor
  * @param {string} selector - CSS Selector
  * @param {object} options - List of saved options
- */
+ *
 function closeAd(selector, options) {
 	// This Ad is present?
 	if ($(selector).is(':visible')) {
@@ -90,6 +92,7 @@ function closeAd(selector, options) {
 		}, seconds);
 	}		
 }
+*/
 
 /**
  * Auto Closer function the extension Init function
@@ -105,11 +108,12 @@ var autoCloser = function () {
 		
 		// The plugin is enabled?
 		if (enabled) {			
-			// Do a check for each Ad
+			/* Do a check for each Ad
 			$.each(ads, function (name, selector) {
 				// Close this Ad
 				closeAd(selector, options);			
 			});
+			*/
 
 			// Mute option enabled?
 			if (mute) {				
