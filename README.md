@@ -3,7 +3,7 @@ Spotify Ad Auto-Muter
 ![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/firefox-banner.png)
 ====
 This is NOT an Ad Blocker, It mute ads.<br/>
-Support Spotify by disabling AdBlock / uBlock on open.spotify.com and use this extension to close the ads as soon as possible after the Close / Skip button is available.<br/>
+Support Spotify by disabling AdBlock / uBlock on open.spotify.com and use this extension to automatically mute audio ads.<!--and use this extension to close the ads as soon as possible after the Close / Skip button is available.--><br/>
 
 <b>Feature:</b> Automatically mute audio ads (Changeable on Options)<br/>
 <b>Feature:</b> Disable / Enable the extension by pressing F1 (Firefox) or F2 (Google Chrome) (Changeable on Options)<br/>
