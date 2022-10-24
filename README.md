@@ -1,6 +1,6 @@
 Spotify Ad Auto-Muter
 =====
-![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-autocloser/main/firefox-banner.png)
+![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/firefox-banner.png)
 ====
 This is NOT an Ad Blocker, It mute ads.<br/>
 Support Spotify by disabling AdBlock / uBlock on open.spotify.com and use this extension to close the ads as soon as possible after the Close / Skip button is available.<br/>
