@@ -24,6 +24,6 @@ Spotify Ad Auto-Muter for [Firefox][Firefox] and [Google Chrome][GoogleChrome]
 This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 To view a copy of this license, visit [Common Creative's Website][License].
 
-[GoogleChrome]: <https://chrome.google.com/webstore/detail/youtube-ad-auto-closer/janhkcfgfnafdebdmlbnhopmnoiepmpc>
+[GoogleChrome]: <https://chrome.google.com/webstore/detail/spotify-ad-auto-muter/hhlhelmnhcmphakjipgkbcjkfpkdnaag>
 [Firefox]: <https://addons.mozilla.org/en-US/firefox/addon/spotify-ad-auto-muter/>
 [License]: <https://creativecommons.org/licenses/by-nc-sa/4.0/>
