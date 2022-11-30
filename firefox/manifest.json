@@ -27,6 +27,6 @@
 		"storage",		
 		"https://www.google-analytics.com/"
 	],
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"web_accessible_resources": ["includes/jquery-3.6.0.min.js", "includes/jquery.hotkeys.js", "includes/spotify.js", "jquery-3.6.0.min.map" ]	
 }

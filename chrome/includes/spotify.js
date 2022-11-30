@@ -13,7 +13,7 @@ var ads = {
 */
 var mute = true;
 var muted = false;
-var audioAdDetector = "a[data-context-item-type='ad'][href^='https://adclick.g.doubleclick.net']";
+var audioAdDetector = "a[data-context-item-type='ad'] img.cover-art-image";
 var video = 'none';
 
 /**
