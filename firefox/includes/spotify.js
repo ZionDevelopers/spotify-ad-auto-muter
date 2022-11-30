@@ -13,7 +13,7 @@ var ads = {
 */
 var mute = true;
 var muted = false;
-var audioAdDetector = "a[data-context-item-type='ad'] img.cover-art-image";
+var audioAdDetector = "nav.Root__nav-bar a[data-context-item-type='ad'] img.cover-art-image";
 var video = 'none';
 
 /**
@@ -117,25 +117,21 @@ var autoCloser = function () {
 
 			// Mute option enabled?
 			if (mute) {				
-				// Detect if audio is playing
-				var audioPlaying = $('div.player-controls__buttons button[data-testid="control-button-playpause"]').attr('aria-label') !== 'Play';
-								
+												
 				// Check if audio ad is present and audio is not muted
-				if($(audioAdDetector).is(':visible') && !muted) {
-					// Check if audio is playing
-					if (audioPlaying) {						
-						// Click on mute button
-						$('div.volume-bar button.volume-bar__icon-button.control-button').click();
-						// Set state to muted
-						muted = true;
-					}
+				if($(audioAdDetector).is(':visible') && !muted) {	
+
+					// Click on mute button
+					$('div.volume-bar button.volume-bar__icon-button.control-button').click();
+					// Set state to muted
+					muted = true;			
+							
 				// Check if audio ad is not present but the ad is muted
 				} else if (!$(audioAdDetector).is(':visible') && muted) {
-					// Check if audio is playing
-					if (audioPlaying) {						
-						// Click on mute button
-						$('div.volume-bar button.volume-bar__icon-button.control-button').click();						
-					}
+									
+					// Click on mute button
+					$('div.volume-bar button.volume-bar__icon-button.control-button').click();						
+					
 					// Unmute
 					muted = false;
 				}				
