@@ -9,7 +9,7 @@ Support Spotify by disabling AdBlock / uBlock on open.spotify.com and use this e
 <b>Feature:</b> Disable / Enable the extension by pressing F1 (Firefox) or F2 (Google Chrome) (Changeable on Options)<br/>
 <i>More features to be developed soon. </i><br />
 
-This is not an Spotify official extension.<br/>
+This is not a Spotify official extension.<br/>
 Spotify is a trade-mark by Spotify Technology S.A.<br/>
 Bender Bending Rodríguez, Futurama is created by Matt Groening for Fox Broadcasting Company.<br/>
 All the logos and pictures here is used under fair-use, And is belonged by the corresponding owners.<br/>
