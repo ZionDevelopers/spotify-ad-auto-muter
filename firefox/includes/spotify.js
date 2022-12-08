@@ -7,7 +7,8 @@ var hotkey = 'F1';
 var uid = 'none';
 
 var ads = {
-	payUpReminder: 'div.Modal div.Modal-cta.Modal-dismiss button'
+	payUpReminderLoggedIn: 'div.Modal div.Modal-cta.Modal-dismiss button',
+	payUpReminderNotLoggedIn: 'div[data-testid="signup-bar"] button:nth-child(odd)'
 };
 
 var mute = true;
