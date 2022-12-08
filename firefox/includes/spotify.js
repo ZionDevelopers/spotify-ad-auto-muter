@@ -14,7 +14,6 @@ var ads = {
 var mute = true;
 var muted = false;
 var audioAdDetector = "nav.Root__nav-bar a[data-context-item-type='ad'] img.cover-art-image";
-var video = 'none';
 
 /**
  * Start interval
