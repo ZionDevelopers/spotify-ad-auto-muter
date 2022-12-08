@@ -8,7 +8,7 @@
 		"matches": [ "*://open.spotify.com/*" ],
 		"run_at": "document_start"
 	} ],
-	"description": "Automatically mute audio ads and skip subscription reminders",
+	"description": "Automatically mute audio ads and skip subscription reminders.",
 	"icons": {
 		"128": "icons/icon.png"
 	},   
