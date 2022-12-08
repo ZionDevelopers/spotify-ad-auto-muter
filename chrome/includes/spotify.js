@@ -5,12 +5,11 @@ var autoCloserId = 0;
 var enabled = true;
 var hotkey = 'F2';
 var uid = 'none';
-/*
+
 var ads = {
-	videoBanner: 'div.video-ads button.ytp-ad-overlay-close-button, div.video-ads div.close-padding', 
-	videoSkip: 'div.video-ads button.ytp-ad-skip-button, div.video-ads button.videoAdUiSkipButton'
+	payUpReminder: 'div.Modal div.Modal-cta.Modal-dismiss button'
 };
-*/
+
 var mute = true;
 var muted = false;
 var audioAdDetector = "nav.Root__nav-bar a[data-context-item-type='ad'] img.cover-art-image";
@@ -65,6 +64,7 @@ function triggerHotkey () {
  * @param {string} selector - CSS Selector
  * @param {object} options - List of saved options
  *
+ */
 function closeAd(selector, options) {
 	// This Ad is present?
 	if ($(selector).is(':visible')) {
@@ -92,7 +92,7 @@ function closeAd(selector, options) {
 		}, seconds);
 	}		
 }
-*/
+
 
 /**
  * Auto Closer function the extension Init function
@@ -108,13 +108,12 @@ var autoCloser = function () {
 		
 		// The plugin is enabled?
 		if (enabled) {			
-			/* Do a check for each Ad
+			// Do a check for each Ad
 			$.each(ads, function (name, selector) {
 				// Close this Ad
 				closeAd(selector, options);			
 			});
-			*/
-
+			
 			// Mute option enabled?
 			if (mute) {				
 												
@@ -123,6 +122,7 @@ var autoCloser = function () {
 
 					// Click on mute button
 					$('div.volume-bar button.volume-bar__icon-button.control-button').click();
+
 					// Set state to muted
 					muted = true;			
 							
@@ -132,7 +132,7 @@ var autoCloser = function () {
 					// Click on mute button
 					$('div.volume-bar button.volume-bar__icon-button.control-button').click();						
 					
-					// Unmute
+					// Set state to be unmuted
 					muted = false;
 				}				
 			}
