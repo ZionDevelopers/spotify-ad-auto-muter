@@ -20,7 +20,7 @@ var audioAdDetector = "nav.Root__nav-bar a[data-context-item-type='ad'] img.cove
  * @constructor 
  */
 function run() {
-	console.log('Spotify Ad Auto-Muter loading...');
+	console.log('Spotify Ad Auto-Muter is loading...');
 	// Run autoCloser function every X milliseconds
     autoCloserId = setInterval(autoCloser, 100);
 }
@@ -42,7 +42,7 @@ function triggerHotkey () {
 	// Revert enabled state
 	enabled = !enabled;
 	// Add html alert
-	$('body').append('<div style="display: none; background-color:' + (enabled ? 'green':'red') + ';color: #fff;font-family: Arial; font-size: 12px; margin: 0 auto; z-index: 9999;position: absolute" id="spotify-ad-autocloser-alert">Spotify Ad Auto-Closer: <b>'+(enabled ? 'Enabled!' : 'Disabled!')+'</b></div>');
+	$('body').append('<div style="display: none; background-color:' + (enabled ? 'green':'red') + ';color: #fff;font-family: Arial; font-size: 12px; margin: 0 auto; z-index: 9999;position: absolute" id="spotify-ad-autocloser-alert">Spotify Ad Auto-Muter: <b>'+(enabled ? 'Enabled!' : 'Disabled!')+'</b></div>');
 	// Fade in the html alert
 	$('div#spotify-ad-autocloser-alert').fadeIn();
 	// Trigger timout for the removal of the html alert
