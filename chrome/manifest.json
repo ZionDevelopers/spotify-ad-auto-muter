@@ -22,7 +22,7 @@
 	"host_permissions": [
 		"https://www.google-analytics.com/"
 	],
-	"version": "0.0.6",
+	"version": "0.1.0",
 	"web_accessible_resources": [{
 		"matches": [ "*://open.spotify.com/*" ],
 		"resources": [
