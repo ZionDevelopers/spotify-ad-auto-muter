@@ -6,8 +6,10 @@ var enabled = true;
 var hotkey = 'F1';
 var uid = 'none';
 
+/*
 var ads = {
 };
+*/
 
 var mute = true;
 var muted = false;
@@ -62,7 +64,7 @@ function triggerHotkey () {
  * @param {string} selector - CSS Selector
  * @param {object} options - List of saved options
  *
- */
+ *
 function closeAd(selector, options) {
 	// This Ad is present?
 	if ($(selector).is(':visible')) {
@@ -90,7 +92,7 @@ function closeAd(selector, options) {
 		}, seconds);
 	}		
 }
-
+*/
 
 /**
  * Auto Closer function the extension Init function
@@ -106,11 +108,12 @@ var autoCloser = function () {
 		
 		// The plugin is enabled?
 		if (enabled) {			
-			// Do a check for each Ad
+			/* Do a check for each Ad
 			$.each(ads, function (name, selector) {
 				// Close this Ad
 				closeAd(selector, options);			
 			});
+			*/
 			
 			// Mute option enabled?
 			if (mute) {				
