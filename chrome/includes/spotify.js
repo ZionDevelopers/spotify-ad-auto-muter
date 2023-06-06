@@ -7,13 +7,11 @@ var hotkey = 'F2';
 var uid = 'none';
 
 var ads = {
-	payUpReminderLoggedIn: 'div.Modal div.Modal-cta.Modal-dismiss button',
-	payUpReminderNotLoggedIn: 'div[data-testid="signup-bar"] button:nth-child(odd)'
 };
 
 var mute = true;
 var muted = false;
-var audioAdDetector = "nav.Root__nav-bar a[data-context-item-type='ad'] img.cover-art-image";
+var audioAdDetector = "div#main nav a[data-context-item-type='ad'] img[data-testid='cover-art-image']";
 
 /**
  * Start interval
