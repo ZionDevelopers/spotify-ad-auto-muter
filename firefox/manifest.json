@@ -13,7 +13,7 @@
 		"matches": ["*://open.spotify.com/*"],
 		"run_at": "document_start"
 	}],
-	"description": "Automatically mute audio ads and skip subscription reminders.",
+	"description": "Automatically mute audio ads.",
 	"icons": {
 		"128": "icon.png" 
 	},   
@@ -27,6 +27,6 @@
 		"storage",		
 		"https://www.google-analytics.com/"
 	],
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"web_accessible_resources": ["includes/jquery-3.6.4.min.js", "includes/jquery.hotkeys.js", "includes/spotify.js", "jquery-3.6.4.min.map" ]	
 }
