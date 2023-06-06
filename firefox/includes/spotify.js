@@ -8,6 +8,8 @@ var uid = 'none';
 
 /*
 var ads = {
+	payUpReminderLoggedIn: 'div.Modal div.Modal-cta.Modal-dismiss button',
+	payUpReminderNotLoggedIn: 'div[data-testid="signup-bar"] button:nth-child(odd)'
 };
 */
 
