@@ -1,5 +1,3 @@
-Spotify Ad Auto-Muter
-=====
 ![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/firefox-banner.png)
 ====
 This is NOT an Ad Blocker, It mute ads.<br/>
