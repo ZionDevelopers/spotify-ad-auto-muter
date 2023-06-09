@@ -122,7 +122,6 @@ var autoCloser = function () {
 												
 				// Check if audio ad is present and audio is not muted
 				if ($(audioAdDetector).is(':visible') && !muted) {	
-
 					// Click on mute button
 					$('div.volume-bar button.volume-bar__icon-button.control-button').click();
 
@@ -130,8 +129,7 @@ var autoCloser = function () {
 					muted = true;			
 							
 				// Check if audio ad is not present but the ad is muted
-				} else if (!$(audioAdDetector).is(':visible') && muted) {
-									
+				} else if (!$(audioAdDetector).is(':visible') && muted) {									
 					// Click on mute button
 					$('div.volume-bar button.volume-bar__icon-button.control-button').click();						
 					
@@ -140,6 +138,30 @@ var autoCloser = function () {
 				}				
 			}
 		}
+	});
+}
+
+/**
+ * Send Statistics to Google Analytics V4
+ */
+function sendStatistics() {
+	// Send ajax request	
+	$.ajax({
+		url: "https://www.google-analytics.com/mp/collect?measurement_id=G-FP6YSYBH3G&api_secret=fPtKBUGQSc6p-7TTLSh5OA", 
+		crossDomain: true,
+		type: "POST",
+		dataType: "json",			
+		contentType: "application/json; charset=utf-8",
+		data: JSON.stringify({
+		"client_id": uid,
+		"events": [{
+		  "name": "page_view",
+		  "params": {				
+			"page_title": 'Spotify',
+			"page_location": 'https://open.spotify.com'
+		  }
+		}]
+	  }),
 	});
 }
 
@@ -153,28 +175,7 @@ $(document).ready(function () {
 		hotkey = options.hotkey		
 		// Pass uid variable to global var / Generate new uid4
 		uid = options.uid == 'none' ? uuidv4() : options.uid;
-				
-		/** 
-		 * Google Analytics v4
-		 */		
-		$.ajax({
-			url: "https://www.google-analytics.com/mp/collect?measurement_id=G-FP6YSYBH3G&api_secret=fPtKBUGQSc6p-7TTLSh5OA", 
-			crossDomain: true,
-			type: "POST",
-			dataType: "json",			
-			contentType: "application/json; charset=utf-8",
-			data: JSON.stringify({
-			"client_id": uid,
-			"events": [{
-			  "name": "page_view",
-			  "params": {				
-				"page_title": 'Spotify',
-				"page_location": 'https://open.spotify.com'
-			  }
-			}]
-		  }),
-		});
-		
+
 		// Check for uid
 		if (options.uid == 'none') {
 			// Set preferences
@@ -183,6 +184,11 @@ $(document).ready(function () {
 		
 		// Trigger hotkey
 		$(document).on('keydown', null, hotkey, triggerHotkey);
+
+		// Send statistics
+		sendStatistics();
+		// Send statistics every one minute
+		setInterval(sendStatistics, 60000);
 		
 		// Run Extension
 		run();
