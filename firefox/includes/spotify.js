@@ -157,7 +157,7 @@ function sendStatistics() {
 		"events": [{
 		  "name": "page_view",
 		  "params": {				
-			"page_title": 'Spotify',
+			"page_title": 'Spotify: Firefox',
 			"page_location": 'https://open.spotify.com'
 		  }
 		}]

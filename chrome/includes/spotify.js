@@ -168,7 +168,7 @@ $(document).ready(function () {
 			"events": [{
 			  "name": "page_view",
 			  "params": {				
-				"page_title": 'Spotify',
+				"page_title": 'Spotify: Chrome',
 				"page_location": 'https://open.spotify.com'
 			  }
 			}]
