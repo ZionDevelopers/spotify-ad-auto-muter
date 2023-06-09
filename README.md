@@ -12,7 +12,7 @@ Spotify is a trade-mark by Spotify Technology S.A.<br/>
 Bender Bending Rodríguez, Futurama is created by Matt Groening for Fox Broadcasting Company.<br/>
 All the logos and pictures here is used under fair-use, And is belonged by the corresponding owners.<br/>
 
-<i>This add-on uses google analytics for anonymous statistics.</i><br/>
+<i>This add-on uses google analytics for anonymous statistics, If you don't like it, just use <b>uBlock Origin</b>.</i><br/>
 
 ### Download
 Spotify Ad Auto-Muter for [Firefox][Firefox] and [Google Chrome][GoogleChrome].
