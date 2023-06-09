@@ -15,7 +15,7 @@ All the logos and pictures here is used under fair-use, And is belonged by the c
 <i>This add-on uses google analytics for anonymous statistics, If you don't like it, just use <b>uBlock Origin</b>.</i><br/>
 
 ### Download
-Spotify Ad Auto-Muter for [Firefox][Firefox] and [Google Chrome][GoogleChrome].
+[![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/firefox-button.png)][Firefox] [![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/chrome-button.png)][GoogleChrome].
 
 ### License
 
