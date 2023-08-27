@@ -15,7 +15,7 @@ var ads = {
 
 var mute = true;
 var muted = false;
-var audioAdDetector = 'div#main aside a[data-context-item-type="ad"] img[data-testid="cover-art-image"]';
+var audioAdDetector = 'div#main aside a[data-context-item-type="ad"]';
 
 /**
  * Start interval
