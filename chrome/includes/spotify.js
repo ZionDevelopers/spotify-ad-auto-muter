@@ -123,7 +123,7 @@ var autoCloser = function () {
 				// Check if audio ad is present and audio is not muted
 				if ($(audioAdDetector).is(':visible') && !muted) {	
 					// Click on mute button
-					$('div.volume-bar button.volume-bar__icon-button.control-button').click();
+					$('div[data-testid="volume-bar"] button').click();
 
 					// Set state to muted
 					muted = true;			
@@ -131,7 +131,7 @@ var autoCloser = function () {
 				// Check if audio ad is not present but the ad is muted
 				} else if (!$(audioAdDetector).is(':visible') && muted) {									
 					// Click on mute button
-					$('div.volume-bar button.volume-bar__icon-button.control-button').click();						
+					$('div[data-testid="volume-bar"] button').click();						
 					
 					// Set state to be unmuted
 					muted = false;
