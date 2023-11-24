@@ -141,30 +141,6 @@ var autoCloser = function () {
 	});
 }
 
-/**
- * Send Statistics to Google Analytics V4
- */
-function sendStatistics() {
-	// Send ajax request	
-	$.ajax({
-		url: "https://www.google-analytics.com/mp/collect?measurement_id=G-FP6YSYBH3G&api_secret=fPtKBUGQSc6p-7TTLSh5OA", 
-		crossDomain: true,
-		type: "POST",
-		dataType: "json",			
-		contentType: "application/json; charset=utf-8",
-		data: JSON.stringify({
-		"client_id": uid,
-		"events": [{
-		  "name": "page_view",
-		  "params": {				
-			"page_title": 'Spotify: Firefox',
-			"page_location": 'https://open.spotify.com'
-		  }
-		}]
-	  }),
-	});
-}
-
 // Run on ready
 $(document).ready(function () { 
 	// Get preferences
@@ -184,11 +160,6 @@ $(document).ready(function () {
 		
 		// Trigger hotkey
 		$(document).on('keydown', null, hotkey, triggerHotkey);
-
-		// Send statistics
-		sendStatistics();
-		// Send statistics every one minute
-		setInterval(sendStatistics, 60000);
 		
 		// Run Extension
 		run();
