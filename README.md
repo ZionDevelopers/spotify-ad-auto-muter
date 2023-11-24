@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/firefox-banner.png)
+![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/images/firefox-banner.png)
 ====
 This is NOT an Ad Blocker, It mute ads.<br/>
 Support Spotify by disabling AdBlock / uBlock on open.spotify.com and use this extension to automatically mute audio ads.<!--and use this extension to close the ads as soon as possible after the Close / Skip button is available.--><br/>
@@ -15,7 +15,7 @@ All the logos and pictures here is used under fair-use, And is belonged by the c
 <i>This add-on uses google analytics for anonymous statistics, If you don't like it, just use <b>uBlock Origin</b>.</i><br/>
 
 ### Download
-[![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/firefox-button.png)][Firefox] [![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/chrome-button.png)][GoogleChrome].
+[![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/images/firefox-button.png)][Firefox] [![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/images/chrome-button.png)][GoogleChrome].
 
 ### License
 
