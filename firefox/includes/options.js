@@ -1,7 +1,6 @@
 // Define global vars
 var enabled = true;
 var hotkey = 'F1';
-var uid = 'none';
 
 /**
  * Trigger Hotkey
@@ -16,33 +15,20 @@ function triggerHotkey () {
 	chrome.storage.sync.set({enabled: enabled}, function() {});	
 }
 
-/**
- * Generate unique id
- * @constructor 
- */
-function uuidv4() {
-  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-  );
-}
-
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 $(document).ready(function () {	
 	// Get preferences
     chrome.storage.sync.get({
         enabled: true,
-        autoCloseAfter: 1,
+        autoCloseAfter: 0.10,
 		hotkey: 'F1',
-		uid: 'none',
 		mute: true
 	}, function(options) {
 		// Pass the enable var to global
 		enabled = options.enabled;	
 		// Pass the hotkey var to global
 		hotkey = options.hotkey;
-		// Pass uid variable to global var / Generate new uid4
-		uid = options.uid == 'none' ? uuidv4() : options.uid;
 		// Pass the mute var to global
 		mute = options.mute;
 		
@@ -56,12 +42,6 @@ $(document).ready(function () {
 		$("input#hotkey").val(hotkey);	
 		// Set hotkey trigger
 		$(document).on('keydown', null, hotkey, triggerHotkey);	
-
-		// Check for uid
-		if (options.uid == 'none') {
-			// Set preferences
-			chrome.storage.sync.set({uid: uid}, function() {});	
-		}		
 		
 		// Saves options to chrome.storage
 		$("input#enabled").click(function () {

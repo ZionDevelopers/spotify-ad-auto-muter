@@ -1,7 +1,6 @@
 // Define global vars
 var enabled = true;
 var hotkey = 'F2';
-var uid = 'none';
 
 /**
  * Trigger Hotkey
@@ -16,58 +15,20 @@ function triggerHotkey () {
 	chrome.storage.sync.set({enabled: enabled}, function() {});	
 }
 
-/**
- * Generate unique id
- * @constructor 
- */
-function uuidv4() {
-  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-  );
-}
-
-/** 
- * Send Statistics to Google Analytics V4
- * @constructor
- */		
-function sendStatistics() {
-	// Send ajax request
-	$.ajax({
-		url: "https://www.google-analytics.com/mp/collect?measurement_id=G-FP6YSYBH3G&api_secret=fPtKBUGQSc6p-7TTLSh5OA", 
-		crossDomain: true,
-		type: "POST",
-		dataType: "json",
-		contentType: "application/json; charset=utf-8",
-		data: JSON.stringify({
-		"client_id": uid,
-		"events": [{
-			"name": "page_view",
-			"params": {				
-			"page_title": 'Options: Chrome',
-			"page_location": 'about:addons'
-			}
-		}]
-		}),
-	});
-}
-
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 $(document).ready(function () {	
 	// Get preferences
     chrome.storage.sync.get({
         enabled: true,
-        autoCloseAfter: 1,
+        autoCloseAfter: 0.10,
 		hotkey: 'F2',
-		uid: 'none',
 		mute: true
 	}, function(options) {
 		// Pass the enable var to global
 		enabled = options.enabled;	
 		// Pass the hotkey var to global
 		hotkey = options.hotkey;
-		// Pass uid variable to global var / Generate new uid4
-		uid = options.uid == 'none' ? uuidv4() : options.uid;
 		// Pass the mute var to global
 		mute = options.mute;
 		
@@ -137,10 +98,5 @@ $(document).ready(function () {
 				}
 			});		
 		});
-
-		// Send statistics
-		sendStatistics();
-		// Send statistics every one minute
-		setInterval(sendStatistics, 60000);
     });	
 });
