@@ -8,9 +8,6 @@ Support Spotify by disabling AdBlock / uBlock on open.spotify.com and use this e
 <i>More features to be developed soon. </i><br />
 
 This is not a Spotify official extension.<br/>
-Spotify is a trade-mark by Spotify Technology S.A.<br/>
-Bender Bending Rodríguez, Futurama is created by Matt Groening for Fox Broadcasting Company.<br/>
-All the logos and pictures here is used under fair-use, And is belonged by the corresponding owners.<br/>
 
 ### Download
 [![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/images/firefox-button.png)][Firefox] [![Logo](https://raw.githubusercontent.com/ZionDevelopers/spotify-ad-auto-muter/main/images/chrome-button.png)][GoogleChrome].
