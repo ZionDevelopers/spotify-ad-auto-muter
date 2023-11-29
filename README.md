@@ -17,6 +17,6 @@ This is not a Spotify official extension.<br/>
 This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 To view a copy of this license, visit [Common Creative's Website][License].
 
-[GoogleChrome]: <https://chrome.google.com/webstore/detail/spotify-ad-auto-muter/hhlhelmnhcmphakjipgkbcjkfpkdnaag>
+[GoogleChrome]: <https://chromewebstore.google.com/detail/spotify-ad-auto-muter/hhlhelmnhcmphakjipgkbcjkfpkdnaag>
 [Firefox]: <https://addons.mozilla.org/en-US/firefox/addon/spotify-ad-auto-muter/>
 [License]: <https://creativecommons.org/licenses/by-nc-sa/4.0/>
