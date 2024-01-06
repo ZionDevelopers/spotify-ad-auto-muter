@@ -1,7 +1,6 @@
 {
 	"browser_specific_settings": {
 	  "gecko": {
-		"id": "spotify-ad-muter@juliocesar.me",
 		"strict_min_version": "57.0"
 	  }
 	},
@@ -26,6 +25,6 @@
 	"permissions": [
 		"storage"
 	],
-	"version": "0.1.9",
+	"version": "0.1.10",
 	"web_accessible_resources": ["includes/jquery-3.7.1.min.js", "includes/jquery.hotkeys.js", "includes/spotify.js", "jquery-3.7.1.min.map" ]	
 }
